@@ -4,10 +4,10 @@ from django.contrib.auth import logout
 # password for test user: pepperp00ts
 
 # Create your views here.
-def register(request):
+def index(request):
     if request.user.is_anonymous:
-        return redirect("")
-    return render(request, 'register.html')
+        return redirect("/register")
+    return render(request, 'index.html')
 
 def loginUser(request):
     if request.method=="POST":
