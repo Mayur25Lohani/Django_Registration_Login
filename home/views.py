@@ -6,7 +6,7 @@ from django.contrib.auth import logout
 # Create your views here.
 def index(request):
     if request.user.is_anonymous:
-        return redirect("/register")
+        return redirect("/login")
     return render(request, 'index.html')
 
 def loginUser(request):
@@ -28,4 +28,4 @@ def loginUser(request):
 
 def logoutUser(request):
     logout(request)
-    return redirect("/index.html")       
+    return redirect("/login")       
